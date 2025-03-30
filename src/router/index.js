@@ -1,7 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import DashboardView from '@/views/DashboardView.vue'
-// import InfiniteScrollView from '@/views/InfiniteScrollView.vue'
-// import SearchView from '@/views/SearchView.vue'
 
 const routes = [
   { path: '/', component: DashboardView },
@@ -10,7 +8,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), // 🔥 Change this to hash mode
   routes,
 })
 
